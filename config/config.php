@@ -10,5 +10,5 @@ $dbname = 'blog';
 
 
 
-//Close the connection
-// $conn = null;
+// Close the connection
+$conn = null;

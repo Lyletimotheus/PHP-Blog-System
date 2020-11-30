@@ -11,7 +11,7 @@ include('includes/header.php');
 <body>
     <div>
         <h1>Please Login</h1>
-        <form method="POST" action="loginprocess.php">
+        <form method="POST" action="includes/loginprocess.php">
         <label for="">Email</label>
         <input type="email" name="email"/>
         <br />
@@ -21,8 +21,9 @@ include('includes/header.php');
         <input type="submit" name="submit" value="Login"/>
         </form>
     </div>
+    <label>No Account?</label>
     <a href="register.php">Sign Up</a>
-
+<?php
 include('includes/footer.php');
-
+?>
 

@@ -1,8 +1,6 @@
 <?php
-include('config/config.php');
-include('config/db.php');
+include('includes/header.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +22,7 @@ include('config/db.php');
         </form>
     </div>
     <a href="register.php">Sign Up</a>
-</body>
-</html>
+
+include('includes/footer.php');
+
 

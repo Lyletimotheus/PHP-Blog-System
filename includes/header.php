@@ -1,7 +1,7 @@
 <?php
 session_start();
-include('config/config.php');
-include('config/db.php');
+include_once('config/config.php');
+include_once('config/db.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,25 +1,20 @@
 <?php
-if(isset($_POST['submit'])){
-    require ('../config/config.php');
-    require ('../config/db.php');
+$emptyEmail = $emptyPassword ="";
 
-    $username = $_POST['email'];
+if(isset($_POST['submit'])){
+    require_once('./config/config.php');
+    require_once('./config/db.php');
+    $email = $_POST['email'];
     $password = $_POST['password'];
     
-  
-
-    if(empty($username)|| empty($password)){
-        header("Location: ../login.php?error=sqlerror");
-        exit();
-    }else{
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["email"])) {
+            $emptyEmail = "Please enter your email address";
+            }
+            if (empty($_POST["password"])) {
+            $emptyPassword = "Please enter your password";
+            }
     }
 }
 
-
-
-
-
-
-// Redirect the user to their profile once they've logged in successfully
-header('Location:../profile.php');
-
+?>

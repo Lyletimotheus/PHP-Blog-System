@@ -1,5 +1,6 @@
 <?php
-include('includes/header.php');
+include_once('includes/header.php');
+include_once('includes/loginprocess.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,21 +10,31 @@ include('includes/header.php');
     <title>Login</title>
 </head>
 <body>
+<center>
     <div>
         <h1>Please Login</h1>
-        <form method="POST" action="includes/loginprocess.php">
+
+        <form method="POST" action="">
         <label for="">Email</label>
         <input type="email" name="email"/>
+        <span class="error">*<?php echo $emptyEmail;
+        ?></span>
+
         <br />
         <label for="">Password</label>
         <input type="password" name="password"/>
+        <span class="error">*<?php echo $emptyPassword;?></span>
+
         <br />
         <input type="submit" name="submit" value="Login"/>
         </form>
+
     </div>
     <label>No Account?</label>
-    <a href="register.php">Sign Up</a>
+    <a href="register.php">Register Here</a>
+</center>
 <?php
-include('includes/footer.php');
+
+include_once('includes/footer.php');
 ?>
 
